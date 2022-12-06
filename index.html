@@ -17,8 +17,8 @@
     <!------------------- header start  ------------------------->
     <header>
         <!-- nav start  -->
-        <nav class="container navbar navbar-expand-lg bg-white">
-            <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white">
+            <div class="container">
                 <div> <a class="navbar-brand fs-4 fw-bolder" href="#">Abacus Convention Center</a>
                 </div>
                 <div>
@@ -50,7 +50,7 @@
         <!-- nav end  -->
 
         <!-- carousel start -->
-        <section class="mt-3">
+        <section class="mt-3 mb-5">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -63,12 +63,15 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
                         <img src="images/banner.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>The perfect venue for your next event</h1>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                                consequat duis enim velit.</p>
-                            <button type="button" class="btn btn-light text-primary fw-bold mb-5 col-2">Book
-                                Now</button>
+                        <div class="carousel-caption d-sm-block d-md-block">
+                            <div class="container w-50 text-center">
+                                <h1>The perfect venue for your next event</h1>
+                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                                    officia
+                                    consequat duis enim velit.</p>
+                                <button type="button" class="btn btn-light text-primary fw-bold mb-5">Book
+                                    Now</button>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
@@ -111,22 +114,80 @@
     <!------------------- main start  ------------------------->
     <main>
         <!------- Album Exploring start -------->
-        <section class="container mt-5 mb-5">
-            <div class="row row-cols-1 row-cols-lg-2 d-flex flex-column-reverse flex-sm-column-reverse flex-lg-row g-5">
-                <div class="col">
+        <section class="container my-5">
+            <div
+                class="row d-flex align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row flex-lg-row g-4">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <img class="img-fluid" src="images/wedding.png" alt="">
                 </div>
-                <div class="col d-flex flex-column justify-content-center ps-4">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center">
                     <h2 class="fw-bolder">Every moment is Precious</h2>
                     <p class="h6 fw-bolder">Amet minim mollit non deserunt ullamco est sit aliqua dolor
                         do amet sint. Velit officia consequat duis enim velit mollit.
                         Exercitation veniam consequat sunt nostrud amet.
                     </p>
-                    <button type="button" class="btn btn-primary fw-bold mt-3 col-6 rounded-0">Explore our
-                        album</button>
+                    <!-- Button trigger modal -->
+                    <button type="button"
+                        class="btn btn-primary rounded-0 fw-semibold d-none d-md-none d-lg-block col-6"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="">Explore our album</span> <img class="" src="./icons/arrow-forward 1.svg" alt=""
+                            srcset="">
+                    </button>
 
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-sm border-start border-5 border-primary rounded-bottom">
+                            <div class="modal-content rounded-0 border border-0">
+                                <div class="modal-body p-1">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn-close opacity-100" style="font-size: 9px;"
+                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="ms-2">
+                                        <p class="mb-0"><img class="img-fluid mb-2 me-1" src="./icons/Vector.svg" alt=""
+                                                srcset="">
+                                            20% off on next booking
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- mobile device button start -->
+            <div class="d-flex d-sm-flex d-md-flex d-lg-none justify-content-center mt-4 ">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary rounded-0 fw-semibold" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Explore our album <img src="./icons/arrow-forward 1.svg" alt="" srcset="">
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog  modal-sm border-start border-5 border-primary rounded-bottom">
+                        <div class="modal-content rounded-0 border border-0">
+                            <div class="modal-body p-1">
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn-close opacity-100" style="font-size: 9px;"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="ms-2">
+
+                                    <p class="mb-0"><img class="img-fluid mb-2 me-1" src="./icons/Vector.svg" alt=""
+                                            srcset="">
+                                        20% off on next booking
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile device button end -->
         </section>
         <!------- Album Exploring end -------->
 
@@ -281,8 +342,9 @@
         <section>
             <div class="container overflow-hidden my-5">
                 <h1 class="text-center fw-bolder my-5">Frequently Asked Questions</h1>
-                <div class="row g-5 d-flex justify-content-center align-items-center">
-                    <div class="col-lg-6 col-md-12 col-sm-12">
+                <div
+                    class="row g-5 d-flex align-items-center justify-content-center flex-column-reverse flex-sm-column-reverse flex-md-row flex-lg-row g-4">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <!-- Accordion part start -->
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
